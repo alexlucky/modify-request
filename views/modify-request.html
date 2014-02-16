@@ -1,0 +1,92 @@
+<% include header.html %>
+<h1>Welcome <%= user.username %>, to Modify Request!!!</h1>
+<a class="btn" href="/logout">Logout</a>
+<form class="form-horizontal well" method="GET">
+	<fieldset>
+	</div>
+		<div class="control group">
+		<label class="control-label" for="store_quota">Storage Quota: </label>
+		<div class="controls">
+		<textarea id="store_quota" name="store_quota" class="span1" rows="1"><%= quota.store_quota %></textarea>
+		<label class="control-label">Currently, <%= quota.store_vm %> VMs are deployed</label>
+		</div>
+	</div>
+
+	</div>
+		<div class="control group">
+		<label class="control-label" for="run_quota">Running Quota: </label>
+		<div class="controls">
+		<textarea id="run_quota" name="run_quota" class="span1" rows="1"><%= quota.run_quota %></textarea>
+		<label class="control-label">Currently, <%= quota.run_vm %> VMs are running</label>
+		</div>
+	</div>
+
+		<div class="control-group">
+		<label class="control-label" for="vmname">VM Name: </label>
+		<div class="controls">
+		<select name="type" id="vm-selector" class="selectpicker show-tick" data-size="5">
+			<% for(var i = 0; i < vm_array.length; ++i) {%>
+			<option><%= vm_array[i].vm_name %></option>
+			<% } %>
+		</select>
+		</div>
+	</div>
+		<div class="control group">
+		<label class="control-label" for="cpu">CPU: </label>
+		<div class="controls">
+		<textarea id="cpu" name="cpu" class="span1" rows="1"></textarea>
+		</div>
+	</div>
+
+	</div>
+		<div class="control group">
+		<label class="control-label" for="memory">memory: </label>
+		<div class="controls">
+		<textarea id="memory" name="memory" class="span1" rows="1"></textarea>
+		</div>
+	</div>
+
+	</div>
+		<div class="control group">
+		<label class="control-label" for="disk">disk1: </label>
+		<div class="controls">
+		<textarea id="disk1" name="disk1" class="span1" rows="1"></textarea>
+		</div>
+	</div>
+
+	<div class="form-actions">
+		<button type="submit" class="btn btn-primary">Submit</button>
+		<button class="btn">Cancel</button>
+	</div>
+
+</fieldset>
+</form>
+
+
+<% include footer.html %>
+
+<script type="text/javascript">
+(function () {
+//下拉菜单
+$('.selectpicker').selectpicker({noneSelectedText:'Select your power-off VM'});
+$('.selectpicker').selectpicker('val',$('.selectpicker').attr('value'));
+})();
+
+function setOptions(vm_array){
+	var selector = $("#vm-selector");
+	selector.find("option").each(function(){
+		$(this).remove();
+	});
+	//var options = "<option value='0'">move to group</option>;
+	for(var i=0;i<vm_array.length;i++){
+		var vm = vm_array[i];
+		var name = vm.vm_name;
+		var id = vm.vm_id;
+		options+="<option value="+id+">"+name+"</options>";
+	}
+	selector.append(options);
+}
+
+//setOptions(<%- vm_array %>);
+</script>
+
