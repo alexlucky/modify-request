@@ -3,21 +3,21 @@
 <a class="btn" href="/logout">Logout</a>
 <form class="form-horizontal well" method="GET">
 	<fieldset>
-	</div>
+	
 		<div class="control group">
 		<label class="control-label" for="store_quota">Storage Quota: </label>
 		<div class="controls">
-		<textarea id="store_quota" name="store_quota" class="span1" rows="1"><%= quota.store_quota %></textarea>
-		<label class="control-label">Currently, <%= quota.store_vm %> VMs are deployed</label>
+		<input type="text" id="store_quota" name="store_quota" value="<%= quota.store_quota %>">
+		<span class="help-inline">Currently, <%= quota.store_vm %> VMs are deployed</span>
 		</div>
 	</div>
 
-	</div>
+	
 		<div class="control group">
 		<label class="control-label" for="run_quota">Running Quota: </label>
 		<div class="controls">
-		<textarea id="run_quota" name="run_quota" class="span1" rows="1"><%= quota.run_quota %></textarea>
-		<label class="control-label">Currently, <%= quota.run_vm %> VMs are running</label>
+		<input type="text" id="run_quota" name="run_quota" value="<%= quota.run_quota %>">
+		<span class="help-inline">Currently, <%= quota.run_vm %> VMs are running</span>
 		</div>
 	</div>
 
@@ -31,26 +31,27 @@
 		</select>
 		</div>
 	</div>
+
 		<div class="control group">
 		<label class="control-label" for="cpu">CPU: </label>
 		<div class="controls">
-		<textarea id="cpu" name="cpu" class="span1" rows="1"></textarea>
+		<input type="text" id="run_quota" name="run_quota" value="">
 		</div>
 	</div>
 
-	</div>
+	
 		<div class="control group">
 		<label class="control-label" for="memory">memory: </label>
 		<div class="controls">
-		<textarea id="memory" name="memory" class="span1" rows="1"></textarea>
+		<input type="text" id="run_quota" name="run_quota" value="">
 		</div>
 	</div>
 
-	</div>
+	
 		<div class="control group">
 		<label class="control-label" for="disk">disk1: </label>
 		<div class="controls">
-		<textarea id="disk1" name="disk1" class="span1" rows="1"></textarea>
+		<input type="text" id="run_quota" name="run_quota" value="">
 		</div>
 	</div>
 

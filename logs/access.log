@@ -1,6 +1,8 @@
-[2014-02-16 19:22:07.278] [INFO] normal - GET /modify-request?store_quota=4&run_quota=3&type=vm1&cpu=&memory=&disk1=
-[2014-02-16 19:22:07.341] [INFO] normal - GET /stylesheets/bootstrap.min.css
-[2014-02-16 19:22:07.408] [INFO] normal - GET /stylesheets/bootstrap-select.min.css
-[2014-02-16 19:22:07.524] [INFO] normal - GET /javascripts/jquery.js
-[2014-02-16 19:22:07.620] [INFO] normal - GET /javascripts/bootstrap.min.js
-[2014-02-16 19:22:07.632] [INFO] normal - GET /javascripts/bootstrap-select.min.js
+[2014-02-16 22:12:01.594] [INFO] normal - GET /img/glyphicons-halflings-white.png
+[2014-02-16 22:32:40.754] [INFO] normal - GET /modify-request
+[2014-02-16 22:32:40.776] [INFO] normal - GET /javascripts/jquery.js
+[2014-02-16 22:32:40.794] [INFO] normal - GET /stylesheets/bootstrap-select.min.css
+[2014-02-16 22:32:40.796] [INFO] normal - GET /stylesheets/bootstrap.min.css
+[2014-02-16 22:32:40.852] [INFO] normal - GET /javascripts/bootstrap.min.js
+[2014-02-16 22:32:40.853] [INFO] normal - GET /javascripts/bootstrap-select.min.js
+[2014-02-16 22:32:40.945] [INFO] normal - GET /img/glyphicons-halflings.png

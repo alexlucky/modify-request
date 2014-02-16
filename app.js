@@ -9,12 +9,6 @@ var http = require('http');
 var path = require('path');
 var ejs = require('ejs');
 var log4js = require('log4js');
-exports.logger = function(name){
-	var logger = log4js.getLogger(name);
-	logger.setLevel('INFO');
-	return logger;
-}
-
 log4js.configure({
 	appenders: [
 	{type: 'console'},
@@ -27,6 +21,13 @@ log4js.configure({
 	],
 	replaceConsole: true
 });
+exports.logger = function(name){
+	var logger = log4js.getLogger(name);
+	logger.setLevel('INFO');
+	return logger;
+}
+
+
 
 
 
