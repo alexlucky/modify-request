@@ -3,6 +3,7 @@
  * GET home page.
  */
 //var logger = require('../app').logger('index');
+var querystring = require('querystring');
 
 exports.index = function(req, res){
 //logger.info("This is an index page!");
@@ -54,7 +55,7 @@ exports.mrequest = function(req, res){
 		vm_cpu:1,
 		vm_memory:10,
 		vm_disk_count:2,
-		vm_disks:[disk1,disk2],
+		vm_disks:[disk1,disk2]
 	}
 	var vm2 = {
 		vm_id:2,
@@ -65,8 +66,8 @@ exports.mrequest = function(req, res){
 		vm_disks:[disk1,disk2],
 	}
 	var vm_array = new Array(quota.store_vm - quota.run_vm);
-	vm_array[0] = vm1;
-	vm_array[1] = vm2;
+	vm_array[0] = querystring.stringify(vm1);
+	vm_array[1] = querystring.stringify(vm2);
 
 res.render('Modify-Request', { title: 'Modify Request',quota:quota,vm_array:vm_array});
 };
