@@ -1,4 +1,107 @@
-<% include header.html %>
-<h1>Welcome to <%= title %></h1>
-<p><a class="btn" href="/login">Login</a></p>
-<% include footer.html %>
+<!DOCTYPE html>
+<!--
+ * @file index.html
+ * Playing with the VMware vcloud-js-sdk.js
+ * @author Alister Lewis-Bowen <alister@different.com>
+-->
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Playing with the VMware vCloud Director JS SDK</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/lib/bootstrap.css" rel="stylesheet">
+    <link href="../css/lib/bootstrap-responsive.css" rel="stylesheet">
+    <link href="../css/vcloud.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <!--<a id="nav-org" class="brand" href="#machines">vCloudPlay</a>-->
+                <div class="nav-collapse collapse">
+                    <ul id="nav-views" class="nav">
+                        <li class="active"><a href="#machines"><i class="icon-hdd icon-white"></i> Machines</a></li>
+                        <li><a href="#library"><i class="icon-book icon-white"></i> Library</a></li>
+                        <!--<li><a href="#prefs"><i class="icon-cog icon-white"></i> Preferences</a></li>-->
+                    </ul>
+                    <form id="search" class="navbar-search pull-left">
+                        <input type="text" class="search-query" placeholder="Search">
+                    </form>
+                    <ul class="nav pull-right">
+                        <li><a class="nav-action" id="nav-logout" href="#logout"><i class="icon-off icon-white"></i> logout</a></li>
+                        <li><a class="nav-action" id="nav-refresh" href="#refresh"><i class="icon-repeat icon-white"></i> refresh</a></li>
+                    </ul>
+                    <span class="nav-user pull-right">Logged into <span class="org">org</span> as <span class="user">user</span></span>
+                    <progress id="nav-progress" max="100%" class="pull-right">Fetching data</progress>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+    </div><!-- /navbar -->
+    <div class="container">
+        <form id="login" class="form-login">
+            <h2 class="form-login-heading">vCloudPlay</h2>
+            <input name="org" type="text" class="input-block-level" placeholder="Organization name">
+            <input name="usr" type="text" class="input-block-level" placeholder="User name">
+            <input type="password" class="input-block-level" placeholder="Password">
+            <button class="btn btn-large btn-primary" type="submit">Sign in</button>
+        </form>
+        <div id="workspace" class="view">
+            <div id="machines">
+                <table class="table table-striped table-bordered table-hover table-condensed">
+                    <caption>Machines in my vCloud</caption>
+                    <thead>
+                        <tr>
+                            <th>App</th>
+                            <th>VM</th>
+                            <th>Action</th>
+                            <th>Status</th>
+                            <th class="hidden-phone">Description</th>
+                            <th>IP</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div id="library" class="view">
+                <table class="table table-striped table-bordered table-hover table-condensed">
+                    <caption>Templates in my vCloud</caption>
+                    <thead>
+                        <tr>
+                            <th>Template</th>
+                            <th>Description</th>
+                            <th class="hidden-phone"># VMs</th>
+                            <th class="hidden-phone">CPU (MHz)</th>
+                            <th class="hidden-phone">Memory (MB)</th>
+                            <th class="hidden-phone">Storage (MB)</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div id="prefs" class="view">
+                <p>Nothing to see here&hellip; yet</p>
+            </div>
+        </div>
+        <progress id="spinner" max="100%">Busy<progress>
+    </div> <!-- /container -->
+    <script src="../js/lib/jquery.min.js"></script>
+    <script src="../js/lib/bootstrap.js"></script>
+    <script src="../js/lib/jquery.base64.min.js"></script>
+    <script src="../js/lib/vcloud-js-sdk.js"></script>
+    <script src="../js/lib/sprintf.js"></script>
+    <script src="../js/center.js"></script>
+    <script src="../js/vcloud.js"></script>
+</body>
+</html>
+

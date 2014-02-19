@@ -1,6 +1,9 @@
-[2014-02-17 00:00:01.580] [INFO] normal - GET /modify-request
-[2014-02-17 00:00:01.616] [INFO] normal - GET /stylesheets/bootstrap.min.css
-[2014-02-17 00:00:01.620] [INFO] normal - GET /stylesheets/bootstrap-select.min.css
-[2014-02-17 00:00:01.626] [INFO] normal - GET /javascripts/jquery.js
-[2014-02-17 00:00:01.636] [INFO] normal - GET /javascripts/bootstrap.min.js
-[2014-02-17 00:00:01.645] [INFO] normal - GET /javascripts/bootstrap-select.min.js
+[2014-02-19 05:02:27.791] [INFO] normal - GET /modify-request
+[2014-02-19 05:02:27.864] [INFO] normal - GET /stylesheets/bootstrap.min.css
+[2014-02-19 05:02:27.869] [INFO] normal - GET /stylesheets/bootstrap-select.min.css
+[2014-02-19 05:02:27.872] [INFO] normal - GET /javascripts/jquery.min.js
+[2014-02-19 05:02:27.875] [INFO] normal - GET /javascripts/bootstrap.min.js
+[2014-02-19 05:02:27.877] [INFO] normal - GET /javascripts/bootstrap-select.min.js
+[2014-02-19 05:02:27.879] [INFO] normal - GET /javascripts/vcloud-js-sdk.js
+[2014-02-19 05:02:27.914] [INFO] normal - GET /javascripts/jquery.base64.min.js
+[2014-02-19 05:02:32.466] [INFO] normal - POST /modify-request
