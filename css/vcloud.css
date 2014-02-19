@@ -1,0 +1,86 @@
+/*
+ * @file vcloud.css
+ * Playing with the VMware vcloud-js-sdk.js
+ * @author Alister Lewis-Bowen <alister@different.com>
+ */
+
+body {
+    padding-bottom: 40px;
+    background-color: #f5f5f5;
+}
+
+/*
+ * = Initial state of UI on login
+ */
+#navbar, #login,
+#workspace, #spinner {
+    display: none;
+}
+
+/*
+ * = login form
+ */
+.form-login {
+    max-width: 300px;
+    padding: 19px 29px 29px;
+    margin: 0 auto 20px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+    box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.form-login .form-login-heading,
+.form-login .checkbox {
+    margin-bottom: 10px;
+}
+.form-login input[type="text"],
+.form-login input[type="password"] {
+    font-size: 16px;
+    height: auto;
+    margin-bottom: 15px;
+    padding: 7px 9px;
+}
+
+/*
+ * = nav bar
+ */
+.nav-user {
+    display: block;
+    font-size: 10px;
+    font-style: italic;
+    padding: 10px 15px 10px;
+}
+.nav-user span {
+    font-weight: bold;
+}
+.nav-action {
+    font-size: 12px;
+}
+#nav-progress {
+    margin-top: 13px;
+    width: 30px;
+}
+#navbar .clear {
+    position: absolute;
+    left: -9999px;
+}
+#navbar .brand {
+    color: white !important;
+}
+
+/*
+ * = view styles
+ */
+
+.view { margin-top: 2em; }
+
+caption { display: none; }
+table tr.busy { background-color: #FCF8E3; }
+table tr.vapp { border-top: 3px solid #222; }
+table td.name { width: 10em; }
+table td.status { width: 6em; }
+table td.ip { width: 5em; }
